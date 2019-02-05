@@ -1,9 +1,9 @@
 
 
-def clip(text, max_len=80):
+def clip(text:str, max_len:'int > 0'=80) -> str:
     end = None
     if len(text) > max_len:
-        space_before = text.rfid(' ', 0, max_len)
+        space_before = text.rfind(' ', 0, max_len)
         if space_before >= 0:
             end = space_before
         else:

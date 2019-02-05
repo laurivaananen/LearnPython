@@ -1,12 +1,16 @@
-products = [('milk', 5.5), ('candy', 2.5), ('bread', 9.0)]
 
-def product_sorter(product):
-    name, price = product
-    return len(name)
 
-sorted_by_name_length = sorted(products, reverse=True, key=product_sorter)
-sorted_by_price = sorted(products, reverse=True, key=lambda x: x[1])
+try:
+    impossible = 5 / 0
+    print("This is not possible")
+except ZeroDivisionError:
+    print("Can't divide by zero")
 
-print(products)
-print(sorted_by_name_length)
-print(sorted_by_price)
+
+short_list = [0, 1, 2]
+
+try:
+    fourth_item = short_list[3]
+    print(fourth_item)
+except IndexError:
+    print("Too short list")
